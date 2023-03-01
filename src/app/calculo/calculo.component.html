@@ -1,0 +1,43 @@
+<div class="container">
+      <mat-toolbar color="accent">
+      <div align="center" style="color:white;text-align: right;">
+        Cálculo
+      </div>
+    </mat-toolbar>
+    <br><br>
+    <mat-card-content>
+      <form>
+        <table>
+          <tr>
+            <td>Valor Inicial</td>
+            <td>Quantidade de Meses</td>
+          </tr>
+          <tr>
+            <td class="tbl1">
+              <input type="text" id="VI" name="VI" placeholder="Valor Incial" [(ngModel)]="VI"/>
+            </td>
+            <td class="tbl1">
+              <input type="text" id="qtdmes" name="qtdmes" placeholder="Quantidade de Meses" [(ngModel)]="qtdmes" />
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="content-center">
+              <button type="button" mat-raised-button color="accent" (click)="calcular()">Calcular</button>
+            </td>
+          </tr>
+        </table>
+        <br><br>
+        <table class="table">
+          <tr ngclass="btn-primary">
+            <th class="tbl2">Valor Bruto</th>
+            <th class="tbl2">Valor Líqudo</th>
+          </tr>
+          <tr>
+            <td class="tbl2">{{_valorBruto | currency}}</td>
+            <td class="tbl2">{{_valorLiquido | currency}}</td>
+          </tr>
+        </table>
+      </form>
+    </mat-card-content>
+</div>
